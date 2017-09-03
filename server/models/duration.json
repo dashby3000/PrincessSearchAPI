@@ -1,0 +1,38 @@
+{
+  "name": "Duration",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "days": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ships": {
+      "type": "hasMany",
+      "model": "Ship",
+      "foreignKey": ""
+    },
+    "destinations": {
+      "type": "hasMany",
+      "model": "Destination",
+      "foreignKey": ""
+    },
+    "departures": {
+      "type": "hasMany",
+      "model": "Departure",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,3605 @@
+paths:
+  '/Destinations/{id}/departures/{fk}':
+    get:
+      tags:
+        - Destination
+      summary: Find a related item by id for departures.
+      operationId: Destination.prototype.__findById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Delete a related item by id for departures.
+      operationId: Destination.prototype.__destroyById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Destination
+      summary: Update a related item by id for departures.
+      operationId: Destination.prototype.__updateById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  '/Destinations/{id}/durations/{fk}':
+    get:
+      tags:
+        - Destination
+      summary: Find a related item by id for durations.
+      operationId: Destination.prototype.__findById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Delete a related item by id for durations.
+      operationId: Destination.prototype.__destroyById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Destination
+      summary: Update a related item by id for durations.
+      operationId: Destination.prototype.__updateById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  '/Destinations/{id}/ships/{fk}':
+    get:
+      tags:
+        - Destination
+      summary: Find a related item by id for ships.
+      operationId: Destination.prototype.__findById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Delete a related item by id for ships.
+      operationId: Destination.prototype.__destroyById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Destination
+      summary: Update a related item by id for ships.
+      operationId: Destination.prototype.__updateById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  '/Destinations/{id}/departures':
+    get:
+      tags:
+        - Destination
+      summary: Queries departures of Destination.
+      operationId: Destination.prototype.__get__departures
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Departure'
+      deprecated: false
+    post:
+      tags:
+        - Destination
+      summary: Creates a new instance in departures of this model.
+      operationId: Destination.prototype.__create__departures
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Deletes all departures of this model.
+      operationId: Destination.prototype.__delete__departures
+      parameters:
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Destinations/{id}/departures/count':
+    get:
+      tags:
+        - Destination
+      summary: Counts departures of Destination.
+      operationId: Destination.prototype.__count__departures
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Destinations/{id}/durations':
+    get:
+      tags:
+        - Destination
+      summary: Queries durations of Destination.
+      operationId: Destination.prototype.__get__durations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Duration'
+      deprecated: false
+    post:
+      tags:
+        - Destination
+      summary: Creates a new instance in durations of this model.
+      operationId: Destination.prototype.__create__durations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Deletes all durations of this model.
+      operationId: Destination.prototype.__delete__durations
+      parameters:
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Destinations/{id}/durations/count':
+    get:
+      tags:
+        - Destination
+      summary: Counts durations of Destination.
+      operationId: Destination.prototype.__count__durations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Destinations/{id}/ships':
+    get:
+      tags:
+        - Destination
+      summary: Queries ships of Destination.
+      operationId: Destination.prototype.__get__ships
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Ship'
+      deprecated: false
+    post:
+      tags:
+        - Destination
+      summary: Creates a new instance in ships of this model.
+      operationId: Destination.prototype.__create__ships
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: Deletes all ships of this model.
+      operationId: Destination.prototype.__delete__ships
+      parameters:
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Destinations/{id}/ships/count':
+    get:
+      tags:
+        - Destination
+      summary: Counts ships of Destination.
+      operationId: Destination.prototype.__count__ships
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Destinations:
+    post:
+      tags:
+        - Destination
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Destination.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    put:
+      tags:
+        - Destination
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Destination.upsert__put_Destinations
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    patch:
+      tags:
+        - Destination
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Destination.upsert__patch_Destinations
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    get:
+      tags:
+        - Destination
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Destination.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Destination'
+      deprecated: false
+  /Destinations/replaceOrCreate:
+    post:
+      tags:
+        - Destination
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Destination.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  /Destinations/upsertWithWhere:
+    post:
+      tags:
+        - Destination
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Destination.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  '/Destinations/{id}/exists':
+    get:
+      tags:
+        - Destination
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Destination.exists__get_Destinations_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Destinations/{id}':
+    head:
+      tags:
+        - Destination
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Destination.exists__head_Destinations_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Destination
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Destination.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Destination
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Destination.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Destination
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Destination.prototype.updateAttributes__put_Destinations_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    patch:
+      tags:
+        - Destination
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Destination.prototype.updateAttributes__patch_Destinations_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Destination id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  '/Destinations/{id}/replace':
+    post:
+      tags:
+        - Destination
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Destination.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  /Destinations/findOne:
+    get:
+      tags:
+        - Destination
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Destination.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  /Destinations/update:
+    post:
+      tags:
+        - Destination
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Destination.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Destination'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Destinations/count:
+    get:
+      tags:
+        - Destination
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Destination.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Departures/{id}/destinations/{fk}':
+    get:
+      tags:
+        - Departure
+      summary: Find a related item by id for destinations.
+      operationId: Departure.prototype.__findById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Delete a related item by id for destinations.
+      operationId: Departure.prototype.__destroyById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Departure
+      summary: Update a related item by id for destinations.
+      operationId: Departure.prototype.__updateById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  '/Departures/{id}/durations/{fk}':
+    get:
+      tags:
+        - Departure
+      summary: Find a related item by id for durations.
+      operationId: Departure.prototype.__findById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Delete a related item by id for durations.
+      operationId: Departure.prototype.__destroyById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Departure
+      summary: Update a related item by id for durations.
+      operationId: Departure.prototype.__updateById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  '/Departures/{id}/ships/{fk}':
+    get:
+      tags:
+        - Departure
+      summary: Find a related item by id for ships.
+      operationId: Departure.prototype.__findById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Delete a related item by id for ships.
+      operationId: Departure.prototype.__destroyById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Departure
+      summary: Update a related item by id for ships.
+      operationId: Departure.prototype.__updateById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  '/Departures/{id}/destinations':
+    get:
+      tags:
+        - Departure
+      summary: Queries destinations of Departure.
+      operationId: Departure.prototype.__get__destinations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Destination'
+      deprecated: false
+    post:
+      tags:
+        - Departure
+      summary: Creates a new instance in destinations of this model.
+      operationId: Departure.prototype.__create__destinations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Deletes all destinations of this model.
+      operationId: Departure.prototype.__delete__destinations
+      parameters:
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Departures/{id}/destinations/count':
+    get:
+      tags:
+        - Departure
+      summary: Counts destinations of Departure.
+      operationId: Departure.prototype.__count__destinations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Departures/{id}/durations':
+    get:
+      tags:
+        - Departure
+      summary: Queries durations of Departure.
+      operationId: Departure.prototype.__get__durations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Duration'
+      deprecated: false
+    post:
+      tags:
+        - Departure
+      summary: Creates a new instance in durations of this model.
+      operationId: Departure.prototype.__create__durations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Deletes all durations of this model.
+      operationId: Departure.prototype.__delete__durations
+      parameters:
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Departures/{id}/durations/count':
+    get:
+      tags:
+        - Departure
+      summary: Counts durations of Departure.
+      operationId: Departure.prototype.__count__durations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Departures/{id}/ships':
+    get:
+      tags:
+        - Departure
+      summary: Queries ships of Departure.
+      operationId: Departure.prototype.__get__ships
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Ship'
+      deprecated: false
+    post:
+      tags:
+        - Departure
+      summary: Creates a new instance in ships of this model.
+      operationId: Departure.prototype.__create__ships
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: Deletes all ships of this model.
+      operationId: Departure.prototype.__delete__ships
+      parameters:
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Departures/{id}/ships/count':
+    get:
+      tags:
+        - Departure
+      summary: Counts ships of Departure.
+      operationId: Departure.prototype.__count__ships
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Departures:
+    post:
+      tags:
+        - Departure
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Departure.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    put:
+      tags:
+        - Departure
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Departure.upsert__put_Departures
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    patch:
+      tags:
+        - Departure
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Departure.upsert__patch_Departures
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    get:
+      tags:
+        - Departure
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Departure.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Departure'
+      deprecated: false
+  /Departures/replaceOrCreate:
+    post:
+      tags:
+        - Departure
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Departure.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  /Departures/upsertWithWhere:
+    post:
+      tags:
+        - Departure
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Departure.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  '/Departures/{id}/exists':
+    get:
+      tags:
+        - Departure
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Departure.exists__get_Departures_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Departures/{id}':
+    head:
+      tags:
+        - Departure
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Departure.exists__head_Departures_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Departure
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Departure.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Departure
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Departure.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Departure
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Departure.prototype.updateAttributes__put_Departures_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    patch:
+      tags:
+        - Departure
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Departure.prototype.updateAttributes__patch_Departures_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Departure id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  '/Departures/{id}/replace':
+    post:
+      tags:
+        - Departure
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Departure.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  /Departures/findOne:
+    get:
+      tags:
+        - Departure
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Departure.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  /Departures/update:
+    post:
+      tags:
+        - Departure
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Departure.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Departure'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Departures/count:
+    get:
+      tags:
+        - Departure
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Departure.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Durations/{id}/destinations/{fk}':
+    get:
+      tags:
+        - Duration
+      summary: Find a related item by id for destinations.
+      operationId: Duration.prototype.__findById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Delete a related item by id for destinations.
+      operationId: Duration.prototype.__destroyById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Duration
+      summary: Update a related item by id for destinations.
+      operationId: Duration.prototype.__updateById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  '/Durations/{id}/departures/{fk}':
+    get:
+      tags:
+        - Duration
+      summary: Find a related item by id for departures.
+      operationId: Duration.prototype.__findById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Delete a related item by id for departures.
+      operationId: Duration.prototype.__destroyById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Duration
+      summary: Update a related item by id for departures.
+      operationId: Duration.prototype.__updateById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  '/Durations/{id}/ships/{fk}':
+    get:
+      tags:
+        - Duration
+      summary: Find a related item by id for ships.
+      operationId: Duration.prototype.__findById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Delete a related item by id for ships.
+      operationId: Duration.prototype.__destroyById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Duration
+      summary: Update a related item by id for ships.
+      operationId: Duration.prototype.__updateById__ships
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for ships
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  '/Durations/{id}/destinations':
+    get:
+      tags:
+        - Duration
+      summary: Queries destinations of Duration.
+      operationId: Duration.prototype.__get__destinations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Destination'
+      deprecated: false
+    post:
+      tags:
+        - Duration
+      summary: Creates a new instance in destinations of this model.
+      operationId: Duration.prototype.__create__destinations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Deletes all destinations of this model.
+      operationId: Duration.prototype.__delete__destinations
+      parameters:
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Durations/{id}/destinations/count':
+    get:
+      tags:
+        - Duration
+      summary: Counts destinations of Duration.
+      operationId: Duration.prototype.__count__destinations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Durations/{id}/departures':
+    get:
+      tags:
+        - Duration
+      summary: Queries departures of Duration.
+      operationId: Duration.prototype.__get__departures
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Departure'
+      deprecated: false
+    post:
+      tags:
+        - Duration
+      summary: Creates a new instance in departures of this model.
+      operationId: Duration.prototype.__create__departures
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Deletes all departures of this model.
+      operationId: Duration.prototype.__delete__departures
+      parameters:
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Durations/{id}/departures/count':
+    get:
+      tags:
+        - Duration
+      summary: Counts departures of Duration.
+      operationId: Duration.prototype.__count__departures
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Durations/{id}/ships':
+    get:
+      tags:
+        - Duration
+      summary: Queries ships of Duration.
+      operationId: Duration.prototype.__get__ships
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Ship'
+      deprecated: false
+    post:
+      tags:
+        - Duration
+      summary: Creates a new instance in ships of this model.
+      operationId: Duration.prototype.__create__ships
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: Deletes all ships of this model.
+      operationId: Duration.prototype.__delete__ships
+      parameters:
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Durations/{id}/ships/count':
+    get:
+      tags:
+        - Duration
+      summary: Counts ships of Duration.
+      operationId: Duration.prototype.__count__ships
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Durations:
+    post:
+      tags:
+        - Duration
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Duration.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    put:
+      tags:
+        - Duration
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Duration.upsert__put_Durations
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    patch:
+      tags:
+        - Duration
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Duration.upsert__patch_Durations
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    get:
+      tags:
+        - Duration
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Duration.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Duration'
+      deprecated: false
+  /Durations/replaceOrCreate:
+    post:
+      tags:
+        - Duration
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Duration.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  /Durations/upsertWithWhere:
+    post:
+      tags:
+        - Duration
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Duration.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  '/Durations/{id}/exists':
+    get:
+      tags:
+        - Duration
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Duration.exists__get_Durations_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Durations/{id}':
+    head:
+      tags:
+        - Duration
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Duration.exists__head_Durations_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Duration
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Duration.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Duration
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Duration.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Duration
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Duration.prototype.updateAttributes__put_Durations_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    patch:
+      tags:
+        - Duration
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Duration.prototype.updateAttributes__patch_Durations_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Duration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  '/Durations/{id}/replace':
+    post:
+      tags:
+        - Duration
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Duration.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  /Durations/findOne:
+    get:
+      tags:
+        - Duration
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Duration.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  /Durations/update:
+    post:
+      tags:
+        - Duration
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Duration.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Duration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Durations/count:
+    get:
+      tags:
+        - Duration
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Duration.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Ships/{id}/departures/{fk}':
+    get:
+      tags:
+        - Ship
+      summary: Find a related item by id for departures.
+      operationId: Ship.prototype.__findById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Delete a related item by id for departures.
+      operationId: Ship.prototype.__destroyById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Ship
+      summary: Update a related item by id for departures.
+      operationId: Ship.prototype.__updateById__departures
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for departures
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+  '/Ships/{id}/destinations/{fk}':
+    get:
+      tags:
+        - Ship
+      summary: Find a related item by id for destinations.
+      operationId: Ship.prototype.__findById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Delete a related item by id for destinations.
+      operationId: Ship.prototype.__destroyById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Ship
+      summary: Update a related item by id for destinations.
+      operationId: Ship.prototype.__updateById__destinations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for destinations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+  '/Ships/{id}/durations/{fk}':
+    get:
+      tags:
+        - Ship
+      summary: Find a related item by id for durations.
+      operationId: Ship.prototype.__findById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Delete a related item by id for durations.
+      operationId: Ship.prototype.__destroyById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Ship
+      summary: Update a related item by id for durations.
+      operationId: Ship.prototype.__updateById__durations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for durations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+  '/Ships/{id}/departures':
+    get:
+      tags:
+        - Ship
+      summary: Queries departures of Ship.
+      operationId: Ship.prototype.__get__departures
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Departure'
+      deprecated: false
+    post:
+      tags:
+        - Ship
+      summary: Creates a new instance in departures of this model.
+      operationId: Ship.prototype.__create__departures
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Departure'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Departure'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Deletes all departures of this model.
+      operationId: Ship.prototype.__delete__departures
+      parameters:
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Ships/{id}/departures/count':
+    get:
+      tags:
+        - Ship
+      summary: Counts departures of Ship.
+      operationId: Ship.prototype.__count__departures
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Ships/{id}/destinations':
+    get:
+      tags:
+        - Ship
+      summary: Queries destinations of Ship.
+      operationId: Ship.prototype.__get__destinations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Destination'
+      deprecated: false
+    post:
+      tags:
+        - Ship
+      summary: Creates a new instance in destinations of this model.
+      operationId: Ship.prototype.__create__destinations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Destination'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Destination'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Deletes all destinations of this model.
+      operationId: Ship.prototype.__delete__destinations
+      parameters:
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Ships/{id}/destinations/count':
+    get:
+      tags:
+        - Ship
+      summary: Counts destinations of Ship.
+      operationId: Ship.prototype.__count__destinations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Ships/{id}/durations':
+    get:
+      tags:
+        - Ship
+      summary: Queries durations of Ship.
+      operationId: Ship.prototype.__get__durations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Duration'
+      deprecated: false
+    post:
+      tags:
+        - Ship
+      summary: Creates a new instance in durations of this model.
+      operationId: Ship.prototype.__create__durations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Duration'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Duration'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: Deletes all durations of this model.
+      operationId: Ship.prototype.__delete__durations
+      parameters:
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Ships/{id}/durations/count':
+    get:
+      tags:
+        - Ship
+      summary: Counts durations of Ship.
+      operationId: Ship.prototype.__count__durations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Ships:
+    post:
+      tags:
+        - Ship
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Ship.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    put:
+      tags:
+        - Ship
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Ship.upsert__put_Ships
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    patch:
+      tags:
+        - Ship
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Ship.upsert__patch_Ships
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    get:
+      tags:
+        - Ship
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Ship.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Ship'
+      deprecated: false
+  /Ships/replaceOrCreate:
+    post:
+      tags:
+        - Ship
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Ship.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  /Ships/upsertWithWhere:
+    post:
+      tags:
+        - Ship
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Ship.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  '/Ships/{id}/exists':
+    get:
+      tags:
+        - Ship
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Ship.exists__get_Ships_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Ships/{id}':
+    head:
+      tags:
+        - Ship
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Ship.exists__head_Ships_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Ship
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Ship.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    delete:
+      tags:
+        - Ship
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Ship.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Ship
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Ship.prototype.updateAttributes__put_Ships_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+    patch:
+      tags:
+        - Ship
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'Ship.prototype.updateAttributes__patch_Ships_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Ship'
+        - name: id
+          in: path
+          description: Ship id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  '/Ships/{id}/replace':
+    post:
+      tags:
+        - Ship
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: Ship.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  /Ships/findOne:
+    get:
+      tags:
+        - Ship
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Ship.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Ship'
+      deprecated: false
+  /Ships/update:
+    post:
+      tags:
+        - Ship
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Ship.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Ship'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Ships/count:
+    get:
+      tags:
+        - Ship
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Ship.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  Departure:
+    properties:
+      name:
+        type: string
+      id:
+        type: number
+        format: double
+      destinationId:
+        type: number
+        format: double
+      durationId:
+        type: number
+        format: double
+      shipId:
+        type: number
+        format: double
+    required:
+      - name
+    additionalProperties: false
+  Duration:
+    properties:
+      name:
+        type: string
+      days:
+        type: number
+        format: double
+      id:
+        type: number
+        format: double
+      destinationId:
+        type: number
+        format: double
+      departureId:
+        type: number
+        format: double
+      shipId:
+        type: number
+        format: double
+    required:
+      - name
+      - days
+    additionalProperties: false
+  Ship:
+    properties:
+      name:
+        type: string
+      id:
+        type: number
+        format: double
+      destinationId:
+        type: number
+        format: double
+      departureId:
+        type: number
+        format: double
+      durationId:
+        type: number
+        format: double
+    required:
+      - name
+    additionalProperties: false
+  Destination:
+    properties:
+      name:
+        type: string
+      id:
+        type: number
+        format: double
+      departureId:
+        type: number
+        format: double
+      durationId:
+        type: number
+        format: double
+      shipId:
+        type: number
+        format: double
+    required:
+      - name
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: princesssearchapi
+  version: 1.0.0
+  title: PrincessSearchAPI
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
